@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		2AC33DF32E838ED2005F9F75 /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2AC33DF22E838ED2005F9F75 /* ParseSwift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		2AC33D342E832A36005F9F75 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AC33DF32E838ED2005F9F75 /* ParseSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,7 @@
 				2AC33D252E832A34005F9F75 /* BeReal */,
 				2AC33D362E832A36005F9F75 /* BeRealTests */,
 				2AC33D402E832A36005F9F75 /* BeRealUITests */,
+				2AC33DF12E838ED2005F9F75 /* Frameworks */,
 				2AC33D242E832A34005F9F75 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +96,13 @@
 				2AC33D3D2E832A36005F9F75 /* BeRealUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		2AC33DF12E838ED2005F9F75 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +125,7 @@
 			);
 			name = BeReal;
 			packageProductDependencies = (
+				2AC33DF22E838ED2005F9F75 /* ParseSwift */,
 			);
 			productName = BeReal;
 			productReference = 2AC33D232E832A34005F9F75 /* BeReal.app */;
@@ -195,6 +209,9 @@
 			);
 			mainGroup = 2AC33D1A2E832A34005F9F75;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				2AC33D612E833656005F9F75 /* XCRemoteSwiftPackageReference "Parse-Swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 2AC33D242E832A34005F9F75 /* Products */;
 			projectDirPath = "";
@@ -552,6 +569,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2AC33D612E833656005F9F75 /* XCRemoteSwiftPackageReference "Parse-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/parse-community/Parse-Swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.14.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2AC33DF22E838ED2005F9F75 /* ParseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2AC33D612E833656005F9F75 /* XCRemoteSwiftPackageReference "Parse-Swift" */;
+			productName = ParseSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2AC33D1B2E832A34005F9F75 /* Project object */;
 }
