@@ -12,6 +12,7 @@ import SwiftUI
 import ParseSwift
 
 struct SignUpView: View {
+    @Binding var isLoggedIn: Bool
     @State private var username = ""
     @State private var password = ""
     @State private var email = ""
@@ -53,7 +54,6 @@ struct SignUpView: View {
         .modifier(BackgroundColorStyle())
     }
 
-    // 👇 Now this has access to username/email/password
     private func signUp() {
         var newUser = User()
         newUser.username = username
@@ -64,6 +64,9 @@ struct SignUpView: View {
             switch result {
             case .success(let user):
                 print("✅ Signed up: \(user)")
+                DispatchQueue.main.async {
+                    isLoggedIn = true
+                }
             case .failure(let error):
                 print("❌ Error: \(error.localizedDescription)")
             }

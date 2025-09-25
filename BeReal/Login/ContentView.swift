@@ -50,7 +50,7 @@ struct ContentView: View {
                     }
                     
                     // Sign Up button
-                    NavigationLink(destination: SignUpView()) {
+                    NavigationLink(destination: SignUpView(isLoggedIn: $isLoggedIn)) {
                         Text("Sign Up")
                             .frame(maxWidth: .infinity)
                             .padding()
