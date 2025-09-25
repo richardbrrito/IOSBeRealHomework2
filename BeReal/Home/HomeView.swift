@@ -41,7 +41,7 @@ struct HomeView: View {
                 }
                 .padding()
 
-                // Make Post Button
+                //Make Post Button
                 Button(action: { showMakePost = true }) {
                     Text("Make Post")
                         .font(.title2)
